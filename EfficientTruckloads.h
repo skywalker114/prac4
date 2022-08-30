@@ -7,7 +7,7 @@ class EfficientTruckloads
 {
 public:
     EfficientTruckloads();
-    long long int numStone(long long int numBox, long long int numsize);
+    long long int numTrucks(long long int numCrates, long long int loadSize);
 };
 
 #endif

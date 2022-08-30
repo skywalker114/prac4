@@ -5,7 +5,7 @@ class Truckloads
 {
     public:
     Truckloads();
-    int numStone(int numBox, int numsize);
+    int numTrucks(int numCrates, int loadSize);
 };
 
 #endif

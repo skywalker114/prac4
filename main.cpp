@@ -29,7 +29,7 @@ int tailfactorial(double x, int n, double sum)
     return tailfactorial(x, n - 1, n * sum);
 }
 
-double tailseries(double x, double n) //
+double tailseries(double x, double n)
 {
     if (n == 0) return x;
     return tailseries(x + (n / (n + 1)), n - 1);
