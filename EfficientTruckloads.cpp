@@ -5,19 +5,19 @@
 
 EfficientTruckloads::EfficientTruckloads(){}
 
-long long int EfficientTruckloads::numStone(long long int numBox, long long int numsize)
+long long int EfficientTruckloads::numTrucks(long long int numCrates, long long int loadSize)
 {
     static long long int memo[150][150];
-    if (numsize == 1)
+    if (loadSize == 1)
     {
-        return numBox;
+        return numCrates;
     }
     else
     {
-        if (memo[numBox][numsize] == 0)
+        if (memo[numCrates][loadSize] == 0)
         {
-            memo[numBox][numsize] = numStone(numBox, numsize - 1) + numBox;
+            memo[numCrates][loadSize] = numTrucks(numCrates, loadSize - 1) + numCrates;
         }
-        return memo[numBox][numsize];
+        return memo[numCrates][loadSize];
     }
 }

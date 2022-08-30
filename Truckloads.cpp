@@ -4,14 +4,14 @@
 
 Truckloads::Truckloads(){}
 
-int Truckloads::numStone(int numBox, int numsize)
+int Truckloads::numTrucks(int numCrates, int loadSize)
 {
-    if (numsize == 1)
+    if (loadSize == 1)
     {
-        return numBox;
+        return numCrates;
     }
     else
     {
-        return numStone(numBox, numsize - 1) + numBox;
+        return numTrucks(numCrates, loadSize - 1) + numCrates;
     }
 }
